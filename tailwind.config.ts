@@ -26,6 +26,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: ["retro", "dracula"],
+  },
 };
 export default config;
