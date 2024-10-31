@@ -1,6 +1,7 @@
 import HomeCard from "@/components/cards/HomeCard";
 import Greeting from "@/components/greeting/Greeting";
 import SocialLink from "@/components/social/SocialLink";
+import { sections } from "@/lib/constants";
 
 
 export default function Page() {
@@ -11,10 +12,9 @@ export default function Page() {
         <Greeting />
 
         <div className=" w-1/2 grid grid-cols-2 gap-4">
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
-          <HomeCard />
+          {sections.map((section, index) => (
+            <HomeCard key={index} title={section.label} link={section.link}/>
+          ))}
         </div>
       </div>
     </div>
